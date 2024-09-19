@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Layout: Two Images Left, Text Right</title>
+  <style>
+     
+    .container {
+      display: grid;
+      gap: 20px;
+      padding: 20px;
+      background-color:darkorange; 
+    }
+
+    .image-text-group {
+      display: grid;
+      gap: 20px;
+      align-items: start; 
+      background-color: white; 
+      padding: 10px;
+      border-radius: 8px; 
+      box-shadow:black ; 
+    }
+
+    .image-text-group img {
+      max-width: 100%; 
+      height: auto;
+    }
+
+    .text {
+      text-align: justify;
+    }
+
+    @media (min-width: 600px) {
+      .container {
+        
+        background-color: blue;
+      }
+
+    
+
+      .image-text-group img {
+        grid-column: 1; 
+      }
+
+      .text {
+        grid-column: 2; 
+        text-align: left; 
+      }
+    }
+
+    @media (min-width: 900px) {
+      .container {
+        
+        background-color: aqua;
+      }
+
+      
+       
+      
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+   
+    <div class="image-text-group">
+      <div>
+        <h1>Sparrow:</h1>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdb0Q0-d1DBwv30Hguhan6nsqw0haLR6zw4A&s" alt="Sparrow">
+      </div>
+      <div class="text">
+        <p>
+          They are social, feeding in crowded flocks and squabbling over crumbs or seeds on the ground. House Sparrows are a common sight at bird feeders; you may also see them bathing in street-side puddles or dustbathing on open ground, ruffling their feathers and flicking water or dust over themselves with similar motions.
+        </p>
+      </div>
+    </div>
+
+    
+    <div class="image-text-group">
+      <div>
+        <h2>Parrot:</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0pim0M76URimLcxYiU8Lfvhjh_4C-aU5i2Q&s" alt="Parrot">
+      </div>
+      <div class="text">
+        <p>
+          Social and affectionate, the name comes from the parrots' strong, monogamous pair bonding and the long periods which paired birds spend sitting together. Lovebirds live in small flocks and eat fruit, vegetables, grasses, and seeds.
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
